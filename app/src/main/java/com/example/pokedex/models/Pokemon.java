@@ -4,6 +4,7 @@ public class Pokemon {
 
     private String name;
     private String url;
+    private int number;
 
     public String getName() {
         return name;
@@ -19,5 +20,14 @@ public class Pokemon {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public int getNumber() {
+        String[] urlPartes = url.split("/");
+        return Integer.parseInt(urlPartes[urlPartes.length - 1]);
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 }
